@@ -1,18 +1,21 @@
 #+title: Racing Game
 
-* Deliverables
-1) Car racing mechanics (how the vehicle works)
+* TODO  Deliverables
+DEADLINE: <2026-11-12 Thu>
+** Car racing mechanics (how the vehicle works)
 
-2) Track lap tracking, timing
+** Track lap tracking, timing
 
-3) Career Mode, Swapping Car Components, Sponsors
+** Career Mode, Swapping Car Components, Sponsors
 
-4) Player recorded races (Ghost Mode)
+** Player recorded races (Ghost Mode)
 
-5) Different stock cars and 5 different metrics that change between them
+** Different stock cars and 5 different metrics that change between them
 
-* TODO Fix mesh & model system cleanup
-** TODO Get 2D Elements to render on the screen
+* HOLD Fix mesh & model system cleanup
+- This sucks
+- ASAN says its double freeing and memory is leaking :((())
+** DONE Get 2D Elements to render on the screen
 
 * TODO Start entity system
 
