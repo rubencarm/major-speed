@@ -1,0 +1,18 @@
+#+title: Racing Game
+
+* Deliverables
+1) Car racing mechanics (how the vehicle works)
+
+2) Track lap tracking, timing
+
+3) Career Mode, Swapping Car Components, Sponsors
+
+4) Player recorded races (Ghost Mode)
+
+5) Different stock cars and 5 different metrics that change between them
+
+* TODO Fix mesh & model system cleanup
+** TODO Get 2D Elements to render on the screen
+
+* TODO Start entity system
+

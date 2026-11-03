@@ -1,0 +1,7 @@
+{
+    "model":
+    {
+        "obj":"models/yonda_classy/Car3.obj",
+        "texture":"models/yonda_classy/car3_yellow.png"
+    }
+}
