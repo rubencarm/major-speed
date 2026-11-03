@@ -12,7 +12,7 @@ static EntityManager entity_manager = {0};
 
 
 
-void entity_close(){
+void entity_close(void){
     int i;
     if(!entity_manager.entityList)return;
     for(i = 0; i < entity_manager.maxEnts; i++){
@@ -42,7 +42,7 @@ void entity_init(Uint32 maxEnts){
 
 }
 
-Entity *entity_new()
+Entity *entity_new(void)
 {
     int i;
     for(i = 0; i < entity_manager.maxEnts; i++)
@@ -102,5 +102,5 @@ void entity_update(Entity *self)
 
 void entity_system_update()
 {
-
+    for 
 }
