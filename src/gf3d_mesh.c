@@ -56,6 +56,18 @@ void gf3d_mesh_manager_close(void) {
         }
         memset(&mesh_manager, '0', sizeof(MeshManager));
 }
+
+void gf3d_mesh_close(void)
+{
+	int i;
+	//go through list of meshes and free them all
+	for(i = 0; i < mesh_manager.meshCount; i++){
+		gf3d_mesh_free(&mesh_manager.meshList[i]);
+	}
+	free(mesh_manager.meshList);
+	memset(&mesh_manager, 0, sizeof(MeshManager));
+}
+
 void gf3d_mesh_init(Uint32 mesh_max) {
 
 	if(mesh_manager.meshCount != 0)
@@ -248,16 +260,6 @@ int gf3d_mesh_obj_buffer_create(Mesh *mesh)
 }
 
 
-void gf3d_mesh_close(void)
-{
-	int i;
-	//go through list of meshes and free them all
-	for(i = 0; i < mesh_manager.meshCount; i++){
-		gf3d_mesh_free(&mesh_manager.meshList[i]);
-	}
-	free(mesh_manager.meshList);
-	memset(&mesh_manager, 0, sizeof(MeshManager));
-}
 
 Mesh *gf3d_mesh_new(void){
 	int i;
@@ -304,7 +306,10 @@ void gf3d_mesh_free(Mesh *mesh)
 	for(i = 0; i < c; i++)
 	{
 		prim=gfc_list_nth(mesh->primitives,i);
+        slog("prim = %p",prim);
 		if(!prim) continue;
+        slog("prim->objData = %p",prim->objData);
+        gf3d_obj_free(prim->objData);
 		gf3d_mesh_primitive_free(prim);
 		
 	}

@@ -20,6 +20,11 @@ typedef struct
 
 static ModelManager model_manager = {0};
 
+void model_set_default_texture(Texture *texture){
+    if(!texture) return;
+    model_manager.defaultTexture = texture;
+}
+
 void model_manager_close(void) {
     int i;
     gf3d_texture_free(model_manager.defaultTexture);
@@ -69,16 +74,15 @@ void model_close(void)
 void model_free(Model *model)
 {
     if(!model) return;
-
-    gf3d_texture_free (model->texture);
-    gf3d_mesh_free(model->mesh);
+    gf3d_texture_free(model->texture);
     memset(model,0,sizeof(Model));
 }
+
 Model *model_new(void){
-    int i;
     for(int i = 0; i < model_manager.modelCount; i++)
     {
         if(model_manager.modelList[i]._refCount) continue;
+        model_manager.modelList->_refCount++;
         return &model_manager.modelList[i];
     }
     return NULL;
@@ -112,12 +116,9 @@ Model *model_load_from_file(const char *filename) {
         return NULL;
     }
     for (i = 0; i < model_manager.modelCount; i++) {
-
+        
     }
-
     return NULL;
-
-
 }
 
 Model *model_load(const char *filename)
@@ -130,9 +131,12 @@ Model *model_load(const char *filename)
     Model *model = NULL;
     if (!filename)
         return NULL;
-    model_load_from_file(filename);
+    model = model_load_from_file(filename);
     if (!model)
         model = model_new();
+    else {
+        return model;
+    }
     if (!model)
         return NULL;
     json = sj_load(filename);
@@ -174,6 +178,7 @@ Model *model_load(const char *filename)
     model->mesh = mesh;
     model->texture = texture;
     gfc_line_cpy(model->mesh->filename, filename);
+
     return model;
 }
 

@@ -40,10 +40,11 @@ void exitGame(void)
 int main(int argc,char *argv[])
 {
     // local variables
-    Model *model;
+    Model *car,*agu;
     // Sprite *bg;
-    GFC_Matrix4 mat = {0};
+    GFC_Matrix4 mat1,mat2 = {0};
     GFC_Matrix4 *view = gf3d_vgraphics_get_view_matrix();
+    GFC_Vector3D pos = {0};
     //initializtion    
     parse_arguments(argc,argv);
     init_logger("gf3d.log",0);
@@ -62,27 +63,32 @@ int main(int argc,char *argv[])
     slog_sync();
     // bg = gf2d_sprite_load_image("images/bg_flat.png");
     gf2d_mouse_load("actors/mouse.actor");
-    model = model_load("models/dino/dino.model");
-    gfc_matrix4_from_vectors(mat,gfc_vector3d(0,0,0),gfc_vector3d(0,0,0),gfc_vector3d(0.5,0.5,0.5));
-    gfc_matrix4_view(*view,gfc_vector3d(10,0,0),gfc_vector3d(0,0,0),gfc_vector3d(0,0,1));
+    agu = model_load("models/dino/dino.model");
+    car = model_load("models/yonda_classy/yonda_classy.model");
+    gfc_matrix4_view(*view,gfc_vector3d(0,10,5),gfc_vector3d(0,0,0),gfc_vector3d(0,0,1));
     slog_sync();
+    float x = 0.5;
     while (!_done) {
-        float x = 0;
         gfc_input_update();
         gf2d_mouse_update();
         gf2d_font_update();
         // camera updaes
-
-        gfc_matrix4_from_vectors(mat,
-                                 gfc_vector3d(0, 0, 0),
-                                 gfc_vector3d(0, 0, x),
-                                 gfc_vector3d(1, 1, 1));
+        
         gf3d_vgraphics_render_start();
         {
-          model_queue_render(model, mat, GFC_COLOR_WHITE);
-          gf2d_font_draw_line_tag("ALT+F4 to exit", FT_H1, GFC_COLOR_WHITE,
-                                  gfc_vector2d(10, 10));
-          gf2d_mouse_draw();
+            gfc_matrix4_from_vectors(mat1,gfc_vector3d(0,0,0),gfc_vector3d(0,x,0),gfc_vector3d(1,1,1));
+            gfc_matrix4_from_vectors(mat2,gfc_vector3d(0,0,0),gfc_vector3d(x,0,0),gfc_vector3d(0.4,0.4,0.4));
+            model_queue_render(car, mat1, GFC_COLOR_WHITE);
+            model_queue_render(agu, mat2, GFC_COLOR_WHITE);
+            gf2d_font_draw_line_tag("ALT+F4 to exit", FT_H1, GFC_COLOR_WHITE,
+                                    gfc_vector2d(10, 10));
+            gf2d_mouse_draw();
+            x = x + 0.01;
+            if(x > 5){
+                x = 0.5;
+            }
+
+            
         }
         gf3d_vgraphics_render_end();
         if (gfc_input_command_down("exit"))_done = 1; // exit condition

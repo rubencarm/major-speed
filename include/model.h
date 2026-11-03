@@ -25,5 +25,6 @@ Model* model_load(const char* filename);
 void model_free(Model* model);
 void model_close(void);
 void model_queue_render(Model* model, GFC_Matrix4 modelMat, GFC_Color colorMod);
+void model_set_default_texture(Texture* texture);
 
 #endif
