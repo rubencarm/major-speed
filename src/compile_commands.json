@@ -1,7 +1,61 @@
 [
   {
     "arguments": [
+      "/usr/lib64/ccache/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-c",
+      "car.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/car.c"
+  },
+  {
+    "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "car.o",
+      "car.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/car.c",
+    "output": "/home/rdc/Projects/major-speed/src/car.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -21,12 +75,41 @@
       "-c",
       "entity.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/entity.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/entity.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "entity.o",
+      "entity.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/entity.c",
+    "output": "/home/rdc/Projects/major-speed/src/entity.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -46,12 +129,12 @@
       "-c",
       "game.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/game.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/game.c"
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -71,12 +154,41 @@
       "-c",
       "gf2d_actor.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf2d_actor.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf2d_actor.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf2d_actor.o",
+      "gf2d_actor.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf2d_actor.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf2d_actor.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -96,12 +208,41 @@
       "-c",
       "gf2d_camera.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf2d_camera.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf2d_camera.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf2d_camera.o",
+      "gf2d_camera.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf2d_camera.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf2d_camera.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -121,12 +262,41 @@
       "-c",
       "gf2d_font.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf2d_font.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf2d_font.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf2d_font.o",
+      "gf2d_font.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf2d_font.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf2d_font.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -146,12 +316,41 @@
       "-c",
       "gf2d_mouse.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf2d_mouse.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf2d_mouse.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf2d_mouse.o",
+      "gf2d_mouse.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf2d_mouse.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf2d_mouse.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -171,12 +370,41 @@
       "-c",
       "gf2d_sprite.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf2d_sprite.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf2d_sprite.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf2d_sprite.o",
+      "gf2d_sprite.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf2d_sprite.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf2d_sprite.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -196,12 +424,41 @@
       "-c",
       "gf3d_buffers.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_buffers.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_buffers.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_buffers.o",
+      "gf3d_buffers.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_buffers.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_buffers.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -221,12 +478,41 @@
       "-c",
       "gf3d_commands.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_commands.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_commands.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_commands.o",
+      "gf3d_commands.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_commands.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_commands.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -246,12 +532,41 @@
       "-c",
       "gf3d_config.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_config.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_config.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_config.o",
+      "gf3d_config.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_config.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_config.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -271,12 +586,41 @@
       "-c",
       "gf3d_debug.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_debug.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_debug.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_debug.o",
+      "gf3d_debug.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_debug.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_debug.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -296,12 +640,41 @@
       "-c",
       "gf3d_device.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_device.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_device.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_device.o",
+      "gf3d_device.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_device.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_device.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -321,12 +694,41 @@
       "-c",
       "gf3d_extensions.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_extensions.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_extensions.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_extensions.o",
+      "gf3d_extensions.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_extensions.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_extensions.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -346,12 +748,41 @@
       "-c",
       "gf3d_gltf_parse.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_gltf_parse.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_gltf_parse.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_gltf_parse.o",
+      "gf3d_gltf_parse.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_gltf_parse.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_gltf_parse.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -371,12 +802,41 @@
       "-c",
       "gf3d_mesh.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_mesh.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_mesh.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_mesh.o",
+      "gf3d_mesh.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_mesh.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_mesh.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -396,12 +856,41 @@
       "-c",
       "gf3d_obj_load.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_obj_load.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_obj_load.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_obj_load.o",
+      "gf3d_obj_load.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_obj_load.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_obj_load.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -421,12 +910,41 @@
       "-c",
       "gf3d_pipeline.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_pipeline.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_pipeline.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_pipeline.o",
+      "gf3d_pipeline.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_pipeline.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_pipeline.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -446,12 +964,41 @@
       "-c",
       "gf3d_shaders.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_shaders.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_shaders.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_shaders.o",
+      "gf3d_shaders.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_shaders.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_shaders.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -471,12 +1018,41 @@
       "-c",
       "gf3d_swapchain.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_swapchain.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_swapchain.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_swapchain.o",
+      "gf3d_swapchain.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_swapchain.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_swapchain.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -496,12 +1072,41 @@
       "-c",
       "gf3d_texture.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_texture.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_texture.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_texture.o",
+      "gf3d_texture.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_texture.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_texture.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -521,12 +1126,41 @@
       "-c",
       "gf3d_uniform_buffers.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_uniform_buffers.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_uniform_buffers.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_uniform_buffers.o",
+      "gf3d_uniform_buffers.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_uniform_buffers.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_uniform_buffers.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -546,12 +1180,41 @@
       "-c",
       "gf3d_validation.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_validation.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_validation.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_validation.o",
+      "gf3d_validation.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_validation.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_validation.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -571,12 +1234,41 @@
       "-c",
       "gf3d_vgraphics.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_vgraphics.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_vgraphics.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_vgraphics.o",
+      "gf3d_vgraphics.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_vgraphics.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_vgraphics.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -596,12 +1288,41 @@
       "-c",
       "gf3d_vqueues.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/gf3d_vqueues.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_vqueues.c"
   },
   {
     "arguments": [
       "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "gf3d_vqueues.o",
+      "gf3d_vqueues.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/gf3d_vqueues.c",
+    "output": "/home/rdc/Projects/major-speed/src/gf3d_vqueues.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
       "-g",
       "-fPIC",
       "-Wall",
@@ -621,8 +1342,8 @@
       "-c",
       "model.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/model.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/model.c"
   },
   {
     "arguments": [
@@ -643,10 +1364,68 @@
       "-I../gfc/include",
       "-I../gfc/simple_logger/include",
       "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "model.o",
+      "model.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/model.c",
+    "output": "/home/rdc/Projects/major-speed/src/model.o"
+  },
+  {
+    "arguments": [
+      "/usr/lib64/ccache/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
       "-c",
       "player.c"
     ],
-    "directory": "/home/rdc/Projects/3d-game-title/src",
-    "file": "/home/rdc/Projects/3d-game-title/src/player.c"
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/player.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-g",
+      "-fPIC",
+      "-Wall",
+      "-pedantic",
+      "-std=gnu99",
+      "-fgnu89-inline",
+      "-Wno-unknown-pragmas",
+      "-Wno-variadic-macros",
+      "-Wformat-truncation=0",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-I../include",
+      "-I../gfc/include",
+      "-I../gfc/simple_logger/include",
+      "-I../gfc/simple_json/include",
+      "-fdiagnostics-color",
+      "-c",
+      "-o",
+      "player.o",
+      "player.c"
+    ],
+    "directory": "/home/rdc/Projects/major-speed/src",
+    "file": "/home/rdc/Projects/major-speed/src/player.c",
+    "output": "/home/rdc/Projects/major-speed/src/player.o"
   }
 ]

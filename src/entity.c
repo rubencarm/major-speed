@@ -55,14 +55,23 @@ Entity *entity_new(void)
         entity_manager.entityList[i].colorMod = GFC_COLOR_WHITE;
         return &entity_manager.entityList[i];
     }
+    return NULL;
 }
+
+void entity_draw(Entity *ent);
 
 void entity_system_draw()
 {
+}
+
+void entity_draw_think() {
     int i;
     for(i = 0; i < entity_manager.maxEnts; i++){
-        if(!entity_manager.entityList[i]._inuse) continue;
+      if (!entity_manager.entityList[i]._inuse)
+          continue;
+      entity_draw(&entity_manager.entityList[i]);
     }
+
 }
 
 void entity_draw(Entity* ent){
@@ -71,13 +80,13 @@ void entity_draw(Entity* ent){
     if(ent->draw){//do we have a draw function
         if(ent->draw(ent))return; //does this draw function handle queueing render?
     }
+    slog("herington");
     gfc_matrix4_from_vectors(
         ent->mat,
         ent->position,
         ent->rotation,
         ent->scale);
     model_queue_render(ent->model, ent->mat, ent->colorMod);
-
 }
 
 void entity_free(Entity* ent){
@@ -102,5 +111,10 @@ void entity_update(Entity *self)
 
 void entity_system_update()
 {
-    for 
+    for (;;) {
+        return;
+    }
+}
+void entity_system_think() {
+    return;
 }

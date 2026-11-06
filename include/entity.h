@@ -14,14 +14,14 @@ struct entity_s
     GFC_Vector3D    scale;
     GFC_Matrix4     mat;
 
-    GFC_Vector3D    velocity;
+    GFC_Vector3D    velocity; //probably wont be used
     GFC_Color       colorMod;
 
     int     (*think)(Entity* self);
     int     (*update)(Entity* self);
     int     (*draw)(Entity* self);
-
 };
+
 /**
  * @brief initialize the entity manager and preallocate them
  * @param maxEnts how many entities can exist at a single moment
@@ -42,16 +42,16 @@ void entity_free(Entity *ent);
 /**
  * @brief run updates on all active entities
  */
-void entity_system_update();
+void entity_system_update(void);
 
 /**
  * @brief finkabout it
  */
-void entity_system_think();
+void entity_system_think(void);
 
 /**
  * @brief queue renders on all active entities
  */
-void entity_draw_think();
+void entity_draw_think(void);
 
 #endif
