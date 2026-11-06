@@ -1,0 +1,29 @@
+{
+    "cars":
+    [
+        {
+          "name":"Yonda Classy",
+          "transmission_type":"regular",
+          "drivetrain":"FWD",
+          "power_graph":"cars/power_graphs/yonda_classy.graph"
+        },
+        {
+          "name":"DiMario D7",
+          "transmission_type":"regular",
+          "drivetrain":"RWD",
+          "power_graph":"cars/power_graphs/dimario_d7.graph"
+        },
+        {
+          "name":"LDW GRi",
+          "transmission_type":"regular",
+          "drivetrain":"FWD",
+          "power_graph":"cars/power_graphs/ldw_gri.graph"
+        },
+        {
+          "name":"Byundai Bionic",
+          "transmission_type":"electric",
+          "drivetrain":"Bionic",
+          "power_graph":"cars/power_graphs/byundai_bionic.graph"
+        }
+    ]
+}
