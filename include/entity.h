@@ -20,6 +20,8 @@ struct entity_s
     int     (*think)(Entity* self);
     int     (*update)(Entity* self);
     int     (*draw)(Entity* self);
+
+    void * data; //misc entity data (car)
 };
 
 /**
@@ -32,7 +34,7 @@ void entity_init(Uint32 MaxEnts);
  * @brief get a blank entity from the system
  * @return NULL on error or OOM, a valid pointer otherwise
  */
-Entity *entity_new();
+Entity *entity_new(void);
 
 /**
  * @brief call to clean up an entity after it is no longer needed

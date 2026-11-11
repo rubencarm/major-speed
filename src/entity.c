@@ -10,8 +10,6 @@ typedef struct
 
 static EntityManager entity_manager = {0};
 
-
-
 void entity_close(void){
     int i;
     if(!entity_manager.entityList)return;
@@ -80,7 +78,6 @@ void entity_draw(Entity* ent){
     if(ent->draw){//do we have a draw function
         if(ent->draw(ent))return; //does this draw function handle queueing render?
     }
-    slog("herington");
     gfc_matrix4_from_vectors(
         ent->mat,
         ent->position,
@@ -109,12 +106,12 @@ void entity_update(Entity *self)
     gfc_vector3d_add(self->position, self->position, self->velocity);
 }
 
-void entity_system_update()
+void entity_system_update(void)
 {
     for (;;) {
         return;
     }
 }
-void entity_system_think() {
+void entity_system_think(void) {
     return;
 }

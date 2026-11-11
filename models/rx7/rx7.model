@@ -1,0 +1,7 @@
+{
+        "model":
+        {
+                "obj":"models/rx7/rx7.obj",
+                "texture":"images/untitled.png"
+        }
+}

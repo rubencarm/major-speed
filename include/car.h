@@ -1,32 +1,46 @@
 #ifndef __CAR_H_
 #define __CAR_H_
 
+
 #include "gfc_types.h"
+#include "gfc_primitives.h"
+#include "entity.h"
+
+typedef float Torque;
+typedef int RPM;
 
 typedef struct{
-    float frontSpringConstant;
-    float frontSpringLength;
-
-    float rearSpringConstant;
-    float rearSpringLength;
-
-}Suspension;
+    Torque torque;
+    RPM rpm;
+}GraphPoint;
 
 typedef struct{
-    float finalDrive;
-    float ratios[8][5]; //[gear][ratio,min_rpm,max_rpm,upshift_rpm,downshift_rpm] 8 gears cause if you need more you're doing too much
-}Transmission;
-
-typedef struct{
-         
-}Engine;
+    GraphPoint* data;
+    Uint32 count;
+}TorqueGraph;
 
 typedef struct carData{
     GFC_TextLine name;
-    Suspension suspension;
-    Transmission transmission;
-    Engine engine;
+
+    float frontSuspensionStiffness;
+    float frontSuspensionLength;
+    float rearSuspensionStiffness;
+    float rearSuspensionLength;
+    float finalDrive;
+    float ratios[8][5];
+    TorqueGraph torqueGraph;
+
+    GFC_Box body; //aabb
+    
+    GFC_Box frontLeftWheel;
+    GFC_Box frontRightWheel;
+    GFC_Box rearLeftWheel;
+    GFC_Box rearRightWheel;
+    
 }CarData;
 
+void car_init(Entity*,const char*, const char*);
 
-#endif // CAR_H_
+Torque car_torque_lookup(TorqueGraph torqueGraph, RPM rpm);
+#endif
+

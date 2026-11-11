@@ -1,0 +1,7 @@
+{
+        "model":
+        {
+                "obj":"models/track/track.obj",
+                "texture":"models/track/track.png"
+        }
+}
