@@ -42,7 +42,10 @@ void exitGame(void)
 int main(int argc,char *argv[])
 {
     // local variables
-    Model *car,*track;
+    Model *car = NULL;
+    Model *track = NULL;
+    Model *body = NULL;
+    Model *tires = NULL;
     // Sprite *bg;
     GFC_Matrix4 mat1 = {0};
     GFC_Matrix4 *view = gf3d_vgraphics_get_view_matrix();
@@ -67,21 +70,31 @@ int main(int argc,char *argv[])
     slog_sync();
     // bg = gf2d_sprite_load_image("images/bg_flat.png");
     gf2d_mouse_load("actors/mouse.actor");
-    track = model_load("models/track/track.model");
 
+    track = model_load("models/track/track.model");
     car = model_load("models/yonda_classy/yonda_classy.model");
+    tires = model_load("models/yonda_classy/tires.model");
+    body = model_load("models/yonda_classy/body.model");
+
+
     carEnt = entity_new();
     slog("carent %p\n",carEnt);
+
     carEnt->model = car;
     carEnt->colorMod = GFC_COLOR_WHITE;
-    carEnt->position = gfc_vector3d(0, 0, 0);
+    carEnt->position = gfc_vector3d(0, 0, 0.8);
     carEnt->scale = gfc_vector3d(1, 1, 1);
     carEnt->rotation = gfc_vector3d(0,0,0);
     car_init(carEnt, "cars/cars.def", "Yonda Classy");
+    ((CarData *)carEnt->data)->cameraOffset = gfc_vector3d(-4,0,1);
 
     pos = gfc_vector3d(0,10,0);
     gfc_matrix4_view(*view,gfc_vector3d(0,10,0),gfc_vector3d(0,0,-1),gfc_vector3d(0,0,1));
     gfc_matrix4_from_vectors(mat1,gfc_vector3d(0,0,0),gfc_vector3d(0,0,0),gfc_vector3d(1,1,1));
+     slog("car %p", car);
+            slog("tires %p",tires);
+
+
 
     slog_sync();
     while (!_done) {
@@ -94,20 +107,30 @@ int main(int argc,char *argv[])
         {
             entity_system_update();
             entity_system_think();
-
             gf2d_font_draw_line_tag("ALT+F4 to exit", FT_H1, GFC_COLOR_WHITE,
                                     gfc_vector2d(10, 10));
             gf2d_mouse_draw();
             model_queue_render(track,mat1,GFC_COLOR_WHITE);
+            model_queue_render(tires,carEnt->mat,GFC_COLOR_RED);
+            model_queue_render(body,carEnt->mat,GFC_COLOR_RED);
             entity_draw_think();
+            car_camera_update(carEnt,*view,0);
+
         }
         gf3d_vgraphics_render_end();
         if (gfc_input_command_down("exit"))_done = 1; // exit condition
         if (gfc_input_command_down("panup")) {
-            slog("hey there");
             gfc_vector3d_add(pos,pos,gfc_vector3d(0,0.1,0.1));
             gfc_matrix4_view(*view,pos,gfc_vector3d(0,0,-1),gfc_vector3d(0,0,1));
         }
+        if(gfc_input_command_down("panleft")){
+            car_camera_update(carEnt,*view,1);
+        }
+        if(gfc_input_command_down("panright")){
+            car_camera_update(carEnt,*view,2);
+        }
+        if(gfc_input_command_down(""))
+
         game_frame_delay();
     }
     vkDeviceWaitIdle(gf3d_vgraphics_get_default_logical_device());    

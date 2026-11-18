@@ -82,8 +82,9 @@ Model *model_new(void){
     for(int i = 0; i < model_manager.modelCount; i++)
     {
         if(model_manager.modelList[i]._refCount) continue;
-        model_manager.modelList->_refCount++;
+        model_manager.modelList[i]._refCount++;
         return &model_manager.modelList[i];
+
     }
     return NULL;
 }
@@ -188,7 +189,13 @@ Model *model_load(const char *filename)
 
 void model_queue_render(Model *model, GFC_Matrix4 modelMat,
                         GFC_Color colorMod) {
+    if(model == NULL)return;
     MeshUBO ubo = gf3d_mesh_get_ubo(modelMat,colorMod);
     gf3d_mesh_queue_render(model->mesh, gf3d_mesh_get_pipeline(), &ubo, model->texture);
 
+}
+
+void terrain_queue_render(Model *model, GFC_Matrix4 modelMat, GFC_Color colorMod){
+    Mesh ubo = gf3d_mesh_get_ubo(modelMat,colorMod);
+    gf3d_mesh_queue_render(model->mesh,gf3d_mesh_get_pipeline_terrain(), &ubo, model->texture);
 }

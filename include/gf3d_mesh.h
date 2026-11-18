@@ -34,7 +34,7 @@ typedef struct
 
 typedef struct
 {
-    Uint16  verts[3];
+    Uint32  verts[3];
 }Face;
 
 typedef struct

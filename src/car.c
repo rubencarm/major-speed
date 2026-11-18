@@ -1,12 +1,14 @@
 #include "simple_json.h"
 #include "simple_logger.h"
 
-#include "../include/car.h"
+#include "car.h"
 
+#include "gfc_vector.h"
+#include "gfc_matrix.h"
 #include "entity.h"
 #include "model.h"
 
-void car_torque_graph_from_filename(CarData *carData, const char *filename);
+static void car_torque_graph_from_filename(CarData *carData, const char *filename);
 
 void car_init(Entity *ent, const char *filename, const char *carName) {
 
@@ -82,11 +84,7 @@ Torque car_torque_lookup(TorqueGraph torqueGraph, RPM rpm) {
       }
       i++;
   }
-
   t = (float)((rpm - low.rpm) / (float)(high.rpm - low.rpm));
-
-  //slog("t = %g",t);
-
   return (1-t)*low.torque + t * high.torque;
 }
 
@@ -125,7 +123,7 @@ void car_torque_graph_from_filename(CarData *data, const char *filename) {
 
   data->torqueGraph = torqueGraph;
 
-  car_slog_torque_graph("yonda classy", data->torqueGraph);
+  // car_slog_torque_graph("yonda classy", data->torqueGraph);
 }
 
 void car_slog_torque_graph(const char *name, TorqueGraph graph) {
@@ -135,6 +133,41 @@ void car_slog_torque_graph(const char *name, TorqueGraph graph) {
   for (i = 0; i < c; i++) {
     slog("torque: %g rpm: %d", graph.data[i].torque, graph.data[i].rpm);
   }
+}
+
+void car_camera_update(Entity *carEnt, GFC_Matrix4 view, int dir){
+
+    GFC_Vector3D forward = {0};
+    GFC_Vector3D cameraPos = {0};
+
+    forward.x = carEnt->mat[0][1];
+    forward.y = carEnt->mat[1][1];
+    forward.z = carEnt->mat[2][1];
+
+    if(dir){
+
+        if(dir == 1){
+            gfc_vector3d_rotate_about_z(&forward,4.71239);
+        }
+        if(dir == 2){
+            gfc_vector3d_rotate_about_z(&forward,1.5081);
+        }
+
+    }
+
+    gfc_vector3d_normalize(&forward);
+    gfc_vector3d_negate(forward,forward); //backwards now lol
+    gfc_vector3d_set_magnitude(&forward,20);
+    gfc_vector3d_add(cameraPos,carEnt->position,forward);
+    gfc_vector3d_add(cameraPos,cameraPos,gfc_vector3d(0,0,3));
+    gfc_matrix4_view(view,cameraPos,carEnt->position,gfc_vector3d(0,0,1));
+
+}
+
+void car_physics_update(Entity* carEnt, float throttle, float brake, float steering){
+
+
+
 }
 
 /*eof@eol*/

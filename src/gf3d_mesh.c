@@ -114,7 +114,7 @@ void gf3d_mesh_init(Uint32 mesh_max) {
         "config/model_pipeline.cfg", gf3d_vgraphics_get_view_extent(),
         mesh_max, gf3d_mesh_get_bind_description(),
         gf3d_mesh_get_attribute_descriptions(NULL), MESH_ATTRIBUTE_COUNT,
-        sizeof(MeshUBO), VK_INDEX_TYPE_UINT16);
+        sizeof(MeshUBO), VK_INDEX_TYPE_UINT32);
 
 	atexit(gf3d_mesh_close);
 }
