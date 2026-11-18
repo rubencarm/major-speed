@@ -1,0 +1,7 @@
+{
+    "model":
+    {
+        "obj":"models/yonda_classy/body.obj",
+        "texture":"images/default.png"
+    }
+}

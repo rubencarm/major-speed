@@ -1,0 +1,7 @@
+{
+    "model":
+    {
+        "obj":"models/yonda_classy/tires.obj",
+        "texture":"images/default.png"
+    }
+}
