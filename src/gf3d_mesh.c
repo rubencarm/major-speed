@@ -15,6 +15,7 @@ typedef struct
 	Uint32		meshCount;
     Mesh *meshList;
     Pipeline *pipe;
+    Pipeline *highlight_pipe;
     VkDevice device;
     VkVertexInputAttributeDescription attributeDescriptions[MESH_ATTRIBUTE_COUNT];
     VkVertexInputBindingDescription bindingDescription;
@@ -109,6 +110,13 @@ void gf3d_mesh_init(Uint32 mesh_max) {
     mesh_manager.bindingDescription.inputRate = VK_VERTEX_INPUT_RATE_VERTEX;
 
 
+    mesh_manager.highlight_pipe = gf3d_pipeline_create_from_config(
+        gf3d_vgraphics_get_default_logical_device(),
+        "config/highlight_pipeline.cfg", gf3d_vgraphics_get_view_extent(),
+        mesh_max, gf3d_mesh_get_bind_description(),
+        gf3d_mesh_get_attribute_descriptions(NULL), MESH_ATTRIBUTE_COUNT,
+        sizeof(MeshUBO), VK_INDEX_TYPE_UINT32);
+
     mesh_manager.pipe = gf3d_pipeline_create_from_config(
         gf3d_vgraphics_get_default_logical_device(),
         "config/model_pipeline.cfg", gf3d_vgraphics_get_view_extent(),
@@ -116,12 +124,21 @@ void gf3d_mesh_init(Uint32 mesh_max) {
         gf3d_mesh_get_attribute_descriptions(NULL), MESH_ATTRIBUTE_COUNT,
         sizeof(MeshUBO), VK_INDEX_TYPE_UINT32);
 
+
+
+
 	atexit(gf3d_mesh_close);
 }
 
 Pipeline *gf3d_mesh_get_pipeline(void) {
     return mesh_manager.pipe;
 }
+
+Pipeline* gf3d_mesh_get_highlight_pipeline(void){
+    return mesh_manager.highlight_pipe;
+}
+Pipeline* gf3d_mesh_get_pipeline_terrain(void){return NULL;}
+
 
 void *gf3d_mesh_get_by_filename(const char *filename)
 {

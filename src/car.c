@@ -56,6 +56,7 @@ void car_init(Entity *ent, const char *filename, const char *carName) {
       car_torque_graph_from_filename(carData, str1);
       ent->data = carData;
       sj_free(json);
+
       return;
     }
   }
@@ -164,10 +165,11 @@ void car_camera_update(Entity *carEnt, GFC_Matrix4 view, int dir){
 
 }
 
-void car_physics_update(Entity* carEnt, float throttle, float brake, float steering){
+int car_physics_update(Entity* carEnt){
 
+}
 
-
+int car_physics_think(Entity* carEnt){
 }
 
 /*eof@eol*/

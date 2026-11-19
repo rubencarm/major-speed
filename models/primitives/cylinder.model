@@ -1,0 +1,7 @@
+{
+        "model":
+        {
+                "obj":"models/primitives/cylinder.obj",
+                "texture":"models/primitives/flatwhite.png"
+        }
+}

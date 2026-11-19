@@ -1,0 +1,7 @@
+{
+        "model":
+        {
+                "obj":"models/flattrack/flattrack.obj",
+                "texture":"models/flattrack/flattrack.png"
+        }
+}

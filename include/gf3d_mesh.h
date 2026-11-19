@@ -170,7 +170,8 @@ void gf3d_mesh_create_vertex_buffer_from_vertices(MeshPrimitive *primitive);
  * @return NULL on error or the pipeline in question
  */
 Pipeline *gf3d_mesh_get_pipeline(void);
-
+Pipeline *gf3d_mesh_get_pipeline_terrain(void);
+Pipeline *gf3d_mesh_get_highlight_pipeline(void);
 /**
  * @brief given a model matrix and basic color, build the meshUBO needed to render a model
  * @param modelMat the model Matrix

@@ -22,7 +22,9 @@
 
 #include "entity.h"
 #include "model.h"
-#include "../include/car.h"
+#include "car.h"
+#include "draw.h"
+#include "level.h"
 
 extern int __DEBUG;
 
@@ -46,6 +48,12 @@ int main(int argc,char *argv[])
     Model *track = NULL;
     Model *body = NULL;
     Model *tires = NULL;
+    GFC_Sphere sphere;
+    sphere.x = 1;
+    sphere.y = 1;
+    sphere.z = 1;
+    sphere.r = 1;
+
     // Sprite *bg;
     GFC_Matrix4 mat1 = {0};
     GFC_Matrix4 *view = gf3d_vgraphics_get_view_matrix();
@@ -71,7 +79,7 @@ int main(int argc,char *argv[])
     // bg = gf2d_sprite_load_image("images/bg_flat.png");
     gf2d_mouse_load("actors/mouse.actor");
 
-    track = model_load("models/track/track.model");
+    track = model_load("models/flattrack/flattrack.model");
     car = model_load("models/yonda_classy/yonda_classy.model");
     tires = model_load("models/yonda_classy/tires.model");
     body = model_load("models/yonda_classy/body.model");
@@ -79,18 +87,22 @@ int main(int argc,char *argv[])
 
     carEnt = entity_new();
     slog("carent %p\n",carEnt);
+    draw3d_draw_init();
 
     carEnt->model = car;
     carEnt->colorMod = GFC_COLOR_WHITE;
     carEnt->position = gfc_vector3d(0, 0, 0.8);
     carEnt->scale = gfc_vector3d(1, 1, 1);
     carEnt->rotation = gfc_vector3d(0,0,0);
+    carEnt->think = car_physics_think;
+    carEnt->update = car_physics_update;
     car_init(carEnt, "cars/cars.def", "Yonda Classy");
+
     ((CarData *)carEnt->data)->cameraOffset = gfc_vector3d(-4,0,1);
 
     pos = gfc_vector3d(0,10,0);
     gfc_matrix4_view(*view,gfc_vector3d(0,10,0),gfc_vector3d(0,0,-1),gfc_vector3d(0,0,1));
-    gfc_matrix4_from_vectors(mat1,gfc_vector3d(0,0,0),gfc_vector3d(0,0,0),gfc_vector3d(1,1,1));
+    gfc_matrix4_from_vectors(mat1,gfc_vector3d(0,0,0),gfc_vector3d(0,0,0),gfc_vector3d(300,300,1));
      slog("car %p", car);
             slog("tires %p",tires);
 
@@ -107,13 +119,16 @@ int main(int argc,char *argv[])
         {
             entity_system_update();
             entity_system_think();
+
             gf2d_font_draw_line_tag("ALT+F4 to exit", FT_H1, GFC_COLOR_WHITE,
                                     gfc_vector2d(10, 10));
             gf2d_mouse_draw();
+            draw3d_draw_sphere(sphere,GFC_COLOR_WHITE);
             model_queue_render(track,mat1,GFC_COLOR_WHITE);
-            model_queue_render(tires,carEnt->mat,GFC_COLOR_RED);
-            model_queue_render(body,carEnt->mat,GFC_COLOR_RED);
+            //model_queue_render(tires,carEnt->mat,GFC_COLOR_RED);
+            // model_queue_render(body,carEnt->mat,GFC_COLOR_RED);
             entity_draw_think();
+
             car_camera_update(carEnt,*view,0);
 
         }
@@ -129,7 +144,30 @@ int main(int argc,char *argv[])
         if(gfc_input_command_down("panright")){
             car_camera_update(carEnt,*view,2);
         }
-        if(gfc_input_command_down(""))
+        if(gfc_input_command_down("throttle")){
+            car_data(carEnt)->throttle = car_data(carEnt)->throttle + 1.0;
+        }
+        if(gfc_input_command_released("throttle")){
+            car_data(carEnt)->throttle = 1;
+        }
+        if(gfc_input_command_down("brake")){
+            car_data(carEnt)->brake = 1;
+        }
+        if(gfc_input_command_down("steer_left")){
+            car_data(carEnt)->steeringAngle = 0;
+        }
+        if(gfc_input_command_released("steer_left")){
+            car_data(carEnt)->steeringAngle = 0;
+        }
+        if(gfc_input_command_down("steer_right")){
+            car_data(carEnt)->steeringAngle = -0.5;
+        }
+        if(gfc_input_command_released("steer_right")){
+            car_data(carEnt)->steeringAngle =0;
+        }
+        if(gfc_input_command_down("steer_left") && gfc_input_command_down("steer_right")){
+            car_data(carEnt)->steeringAngle = 0;
+        }
 
         game_frame_delay();
     }

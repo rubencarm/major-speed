@@ -30,7 +30,8 @@ typedef struct carData{ //we need so much stuff
     float ratios[8][5];
     TorqueGraph torqueGraph;
 
-    GFC_Box body;
+    GFC_Sphere front;
+    GFC_Sphere rear;
 
     GFC_Box frontLeftWheel;
     GFC_Box frontRightWheel;
@@ -38,6 +39,12 @@ typedef struct carData{ //we need so much stuff
     GFC_Box rearRightWheel;
 
     GFC_Vector3D cameraOffset;
+
+    float throttle;
+    float brake;
+    float steeringAngle;
+    float mass;
+
     
 }CarData;
 
@@ -48,6 +55,9 @@ void car_init(Entity*,const char*, const char*);
 Torque car_torque_lookup(TorqueGraph torqueGraph, RPM rpm);
 
 void car_camera_update(Entity* carEnt, GFC_Matrix4 view,int dir);
+
+int car_physics_think(Entity* carEnt);
+int car_physics_update(Entity* carEnt);
 
 #endif
 

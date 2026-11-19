@@ -183,10 +183,6 @@ Model *model_load(const char *filename)
     return model;
 }
 
-
-
-
-
 void model_queue_render(Model *model, GFC_Matrix4 modelMat,
                         GFC_Color colorMod) {
     if(model == NULL)return;
@@ -195,7 +191,13 @@ void model_queue_render(Model *model, GFC_Matrix4 modelMat,
 
 }
 
-void terrain_queue_render(Model *model, GFC_Matrix4 modelMat, GFC_Color colorMod){
-    Mesh ubo = gf3d_mesh_get_ubo(modelMat,colorMod);
+void model_terrain_queue_render(Model *model, GFC_Matrix4 modelMat, GFC_Color colorMod){
+    MeshUBO ubo = gf3d_mesh_get_ubo(modelMat,colorMod);
     gf3d_mesh_queue_render(model->mesh,gf3d_mesh_get_pipeline_terrain(), &ubo, model->texture);
+}
+
+void model_highlight_queue_render(Model* model, GFC_Matrix4 modelMat, GFC_Color colorMod){
+    if(model == NULL) return;
+    MeshUBO ubo = gf3d_mesh_get_ubo(modelMat,colorMod);
+    gf3d_mesh_queue_render(model->mesh, gf3d_mesh_get_highlight_pipeline(), &ubo, model->texture);
 }
